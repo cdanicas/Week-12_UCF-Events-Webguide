@@ -1,0 +1,100 @@
+<div class="module-budgeting">
+    <div class="section-header" data-aos="fade-down">
+        <h2 class="section-title">Budgeting Your Event</h2>
+        <p class="section-description">
+            Plan your event budget effectively with our interactive calculator and best practices guide.
+        </p>
+    </div>
+
+    <!-- Budget Calculator -->
+    <div id="budget-calculator-container"></div>
+
+    <!-- Best Practices -->
+    <div class="section" data-aos="fade-up">
+        <h3>Event Budgeting Best Practices</h3>
+        <div class="grid grid-2">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Planning Ahead</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="link-list">
+                        <li>Start budget planning 3-6 months before your event</li>
+                        <li>Include a 10-15% contingency for unexpected costs</li>
+                        <li>Get multiple quotes for major expenses</li>
+                        <li>Track all expenses in real-time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Cost-Saving Tips</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="link-list">
+                        <li>Book UCF venues early for better rates</li>
+                        <li>Consider student organization discounts</li>
+                        <li>Use UCF catering services when possible</li>
+                        <li>Leverage free marketing through UCF channels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Common Budget Categories</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="link-list">
+                        <li>Venue rental and setup</li>
+                        <li>Food and beverage</li>
+                        <li>Marketing and promotion</li>
+                        <li>Audio/visual equipment</li>
+                        <li>Entertainment or speakers</li>
+                        <li>Decorations and supplies</li>
+                        <li>Security and permits</li>
+                        <li>Staff and volunteers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Tracking & Reporting</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="link-list">
+                        <li>Save all receipts and invoices</li>
+                        <li>Use the budget calculator to track spending</li>
+                        <li>Export reports for stakeholders</li>
+                        <li>Review budget vs. actual costs post-event</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Funding Sources -->
+    <div class="section" data-aos="fade-up">
+        <h3>Funding Sources for UCF Events</h3>
+        <div class="alert alert-info">
+            <h4>Available Funding Options:</h4>
+            <ul>
+                <li><strong>Student Government Association (SGA)</strong> - Funding for student organization events</li>
+                <li><strong>Departmental Budgets</strong> - Contact your department's business office</li>
+                <li><strong>Sponsorships</strong> - Local businesses and corporate partners</li>
+                <li><strong>Registration Fees</strong> - For conferences or ticketed events</li>
+                <li><strong>Grants</strong> - University and external grant opportunities</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/tools/budgetCalculator.js"></script>
+<script>
+    // Initialize budget calculator when this module loads
+    if (typeof BudgetCalculator !== 'undefined') {
+        window.budgetCalc = new BudgetCalculator();
+    }
+</script>

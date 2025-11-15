@@ -1,0 +1,302 @@
+/* ================================
+   Reusable Components
+   ================================ */
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-primary {
+    background-color: var(--ucf-black);
+    color: var(--ucf-gold);
+}
+
+.btn-primary:hover {
+    background-color: var(--gray-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: var(--ucf-gold);
+    color: var(--ucf-black);
+}
+
+.btn-secondary:hover {
+    background-color: var(--ucf-gold-alt);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--ucf-black);
+    border: 2px solid var(--ucf-black);
+}
+
+.btn-outline:hover {
+    background-color: var(--ucf-black);
+    color: var(--ucf-gold);
+}
+
+.btn-lg {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.125rem;
+}
+
+.btn-sm {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+/* ===== Cards ===== */
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-bottom: 2px solid var(--ucf-gold);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--ucf-black);
+    margin-bottom: var(--spacing-xs);
+}
+
+.card-body {
+    color: var(--gray-700);
+}
+
+.card-footer {
+    border-top: 1px solid var(--gray-200);
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* ===== Alerts ===== */
+.alert {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid;
+}
+
+.alert-info {
+    background-color: #EFF6FF;
+    border-color: #3B82F6;
+    color: #1E40AF;
+}
+
+.alert-success {
+    background-color: #F0FDF4;
+    border-color: #22C55E;
+    color: #166534;
+}
+
+.alert-warning {
+    background-color: #FFFBEB;
+    border-color: var(--ucf-gold);
+    color: #92400E;
+}
+
+.alert-error {
+    background-color: #FEF2F2;
+    border-color: #EF4444;
+    color: #991B1B;
+}
+
+/* ===== Forms ===== */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-xs);
+    color: var(--gray-700);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--ucf-gold);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-helper {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-top: var(--spacing-xs);
+}
+
+.form-error {
+    color: #EF4444;
+    font-size: 0.875rem;
+    margin-top: var(--spacing-xs);
+}
+
+/* ===== Tables ===== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-md);
+}
+
+.table thead {
+    background-color: var(--ucf-black);
+    color: var(--ucf-gold);
+}
+
+.table th,
+.table td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.table tbody tr:hover {
+    background-color: var(--gray-50);
+}
+
+/* ===== Links ===== */
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.link-list a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--ucf-black);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-fast);
+}
+
+.link-list a:hover {
+    color: var(--ucf-gold);
+    transform: translateX(5px);
+}
+
+.link-list a::before {
+    content: '→';
+    margin-right: var(--spacing-xs);
+    color: var(--ucf-gold);
+    font-weight: bold;
+}
+
+/* ===== Badge ===== */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-semibold);
+    border-radius: 9999px;
+    background-color: var(--ucf-gold);
+    color: var(--ucf-black);
+}
+
+/* ===== Progress Bar ===== */
+.progress {
+    height: 20px;
+    background-color: var(--gray-200);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--ucf-gold);
+    transition: width var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ucf-black);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-bold);
+}
+
+/* ===== Grid System ===== */
+.grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ===== Section ===== */
+.section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--ucf-black);
+    border-bottom: 3px solid var(--ucf-gold);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.section-description {
+    color: var(--gray-600);
+    font-size: 1.125rem;
+}

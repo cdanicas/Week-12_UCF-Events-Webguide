@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UCF Event Planning Educational Website - Step-by-step guidance for planning university events">
+    <title>UCF Event Planning Guide</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/images/ucf-tab.png" alt="UCF Logo" class="ucf-logo">
+                <h1 class="site-title">Event Planning Guide</h1>
+                <p class="site-subtitle">Your comprehensive resource for planning successful UCF events</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-navigation" role="navigation">
+        <div class="container">
+            <ul class="tabs" role="tablist">
+                <li role="presentation">
+                    <button class="tab-button active" role="tab" aria-selected="true" data-tab="conflict-management">
+                        Conflict Management
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="budgeting">
+                        Budgeting
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="venues">
+                        Venues
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="parking-transportation">
+                        Parking & Transportation
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="security">
+                        Security
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="catering">
+                        Catering Services
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="permits">
+                        Event Permits
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="lodging">
+                        Lodging
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" role="tab" aria-selected="false" data-tab="marketing">
+                        Marketing
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Tab Panels will be loaded here dynamically -->
+            <div id="tab-content" class="tab-content" role="tabpanel">
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 University of Central Florida. All rights reserved.</p>
+                <p>
+                    <a href="https://www.ucf.edu/brand/" target="_blank" rel="noopener">UCF Brand Standards</a> |
+                    <a href="https://www.ucf.edu/" target="_blank" rel="noopener">UCF.edu</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="assets/js/utils/helpers.js"></script>
+    <script src="assets/js/utils/csvLoader.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

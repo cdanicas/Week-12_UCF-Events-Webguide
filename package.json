@@ -1,0 +1,28 @@
+{
+  "name": "ucf-event-planning-guide",
+  "version": "1.0.0",
+  "description": "UCF Event Planning Educational Website - Step-by-step guidance for UCF event planners",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 8080 -o",
+    "start": "npm run dev",
+    "build": "echo 'Static site - no build step required'",
+    "deploy": "gh-pages -d .",
+    "lint": "eslint assets/js/**/*.js",
+    "lint:fix": "eslint assets/js/**/*.js --fix"
+  },
+  "keywords": [
+    "ucf",
+    "event-planning",
+    "education",
+    "university"
+  ],
+  "author": "UCF",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "gh-pages": "^6.1.1",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {}
+}
