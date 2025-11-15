@@ -8,7 +8,23 @@ class TabNavigation {
         this.tabButtons = document.querySelectorAll('.tab-button');
         this.tabContent = document.getElementById('tab-content');
         this.currentTab = 'conflict-management';
+        // Get base path for GitHub Pages support
+        this.basePath = this.getBasePath();
         this.init();
+    }
+
+    getBasePath() {
+        // Get the base path from the current URL
+        // For GitHub Pages: /repo-name/
+        // For root domain: /
+        const path = window.location.pathname;
+        const segments = path.split('/').filter(s => s);
+
+        // If there's a repository name in the path (GitHub Pages project site)
+        if (segments.length > 0 && !segments[0].endsWith('.html')) {
+            return `/${segments[0]}/`;
+        }
+        return '/';
     }
 
     init() {
@@ -50,7 +66,7 @@ class TabNavigation {
 
     async loadTab(tabName) {
         try {
-            const response = await fetch(`modules/${tabName}.html`);
+            const response = await fetch(`${this.basePath}modules/${tabName}.html`);
 
             if (!response.ok) {
                 throw new Error(`Failed to load ${tabName}`);
@@ -68,10 +84,17 @@ class TabNavigation {
             }
         } catch (error) {
             console.error('Error loading tab:', error);
+            console.error('Attempted to load from:', `${this.basePath}modules/${tabName}.html`);
             this.tabContent.innerHTML = `
                 <div class="alert alert-error">
                     <h3>Error Loading Content</h3>
                     <p>Unable to load the ${tabName} module. Please try again.</p>
+                    <p style="font-size: 0.875rem; color: var(--gray-500);">
+                        Path attempted: ${this.basePath}modules/${tabName}.html
+                    </p>
+                    <p style="font-size: 0.875rem; color: var(--gray-500);">
+                        Error: ${error.message}
+                    </p>
                 </div>
             `;
         }

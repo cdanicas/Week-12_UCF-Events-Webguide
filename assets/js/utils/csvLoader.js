@@ -6,6 +6,19 @@
 class CSVLoader {
     constructor() {
         this.cache = {};
+        this.basePath = this.getBasePath();
+    }
+
+    getBasePath() {
+        // Get the base path from the current URL
+        const path = window.location.pathname;
+        const segments = path.split('/').filter(s => s);
+
+        // If there's a repository name in the path (GitHub Pages project site)
+        if (segments.length > 0 && !segments[0].endsWith('.html')) {
+            return `/${segments[0]}/`;
+        }
+        return '/';
     }
 
     /**
@@ -18,7 +31,7 @@ class CSVLoader {
         }
 
         try {
-            const response = await fetch(`data/${filename}`);
+            const response = await fetch(`${this.basePath}data/${filename}`);
 
             if (!response.ok) {
                 throw new Error(`Failed to load ${filename}`);
